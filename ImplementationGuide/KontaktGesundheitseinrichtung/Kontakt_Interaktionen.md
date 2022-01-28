@@ -72,6 +72,16 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
     Dieser Suchparameter ist für die Umsetzung des IHE QEDm Profils verpflichtend.
 
+1. Der Suchparameter "partOf" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/Encounter?part-of=Encounter/test```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "Encounter.partOf" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Reference Search"](https://www.hl7.org/fhir/search.html#reference).
+
+    Dieser Suchparameter ist für die Umsetzung des IHE QEDm Profils verpflichtend.
+
 1. Der Suchparameter "location" KANN unterstützt werden:
 
     Beispiele:
@@ -79,14 +89,6 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
     ```GET [base]/Encounter?location=Location/test```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "Encounter.location" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Reference Search"](https://www.hl7.org/fhir/search.html#reference).
-
-1. Der Suchparameter "partOf" KANN unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Encounter?part-of=Encounter/test```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "Encounter.partOf" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Reference Search"](https://www.hl7.org/fhir/search.html#reference).
 
 1. Der Suchparameter "service-provider" KANN unterstützt werden:
 
@@ -100,7 +102,7 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
     Beispiele:
 
-    ```GET [base]/Encounter?_profile=https://gematik.de/fhir/ISiK/StructureDefinition/ISiKKontaktGesundheitseinrichtung```
+    ```GET [base]/Encounter?_profile=https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKKontaktGesundheitseinrichtung```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
     

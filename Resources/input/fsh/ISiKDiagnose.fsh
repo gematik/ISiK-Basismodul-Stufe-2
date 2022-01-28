@@ -5,6 +5,7 @@ Description: "Dieses Profil ermöglicht die Nutzung von Diagnosen in ISiK Szenar
 * insert Meta
 * obeys isik-con1
 * id MS
+* extension MS
 * extension ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "url"
   * ^slicing.rules = #open
@@ -102,7 +103,7 @@ Usage: #example
 * code.coding.extension.url = "http://fhir.de/StructureDefinition/icd-10-gm-mehrfachcodierungs-kennzeichen"
 * code.coding.extension.valueCoding = $icd-10-gm-mehrfachcodierungs-kennzeichen#*
 * code.coding.version = "2019"
-* code.coding = $-icd-10-gm#H36.0 "Retinopathia diabetica"
+* code.coding = $icd-10-gm#H36.0 "Retinopathia diabetica"
 * subject = Reference(Patient/example)
 * encounter = Reference(Encounter/example)
 * recordedDate = "2021-05-24"
