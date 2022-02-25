@@ -116,7 +116,7 @@ Usage: #example
 * code.coding.version = "2020"
 * code.coding = $icd-10-gm#F71 "Mittelgradige Intelligenzminderung"
 * subject = Reference(PatientinMusterfrau)
-* encounter = Reference(BeispielKontakt)
+* encounter = Reference(Encounter/example)
 * onsetDateTime = "2019-09-02"
 * recordedDate = "2021-01-01"
 

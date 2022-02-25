@@ -133,7 +133,7 @@ Usage: #example
 * period.end = "2021-02-13"
 * diagnosis.condition = Reference(MittelgradigeIntelligenzminderung)
 * diagnosis.use = http://fhir.de/CodeSystem/KontaktDiagnoseProzedur#treatment-diagnosis
-* account = Reference(Account/test)
+* account = Reference(AbrechnungsfallAmbulant)
 * hospitalization.admitSource = $Aufnahmeanlass#E
 * hospitalization.dischargeDisposition.extension.url = "http://fhir.de/StructureDefinition/Entlassungsgrund"
 * hospitalization.dischargeDisposition.extension.extension[0].url = "ErsteUndZweiteStelle"
