@@ -128,7 +128,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "preferred",
-          "valueSet": "https://gematik.de/fhir/ISiK/v2/ValueSet/ProzedurenKategorie-SCT"
+          "valueSet": "https://gematik.de/fhir/ISiK/v2/ValueSet/ProzedurenKategorieSCT"
         }
       },
       {
@@ -228,7 +228,7 @@
         "max": "1",
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/ISiK/v2/ValueSet/ProzedurenCodes-SCT"
+          "valueSet": "https://gematik.de/fhir/ISiK/v2/ValueSet/ProzedurenCodesSCT"
         }
       },
       {
