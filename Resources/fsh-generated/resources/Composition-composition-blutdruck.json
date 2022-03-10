@@ -24,10 +24,10 @@
     ]
   },
   "subject": {
-    "reference": "Patient/patient"
+    "reference": "patient"
   },
   "encounter": {
-    "reference": "Encounter/encounter"
+    "reference": "encounter"
   },
   "date": "2020-10-19",
   "author": [
