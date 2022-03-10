@@ -18,7 +18,10 @@ Sollte die erezugte Ressource dauerhaft übernommen werden in das bestäigungsre
 
 Per Create-Interaktion erzeugte Ressourcen MÜSSEN im Falle einer erfolgreichen Übermittelung direkt über die READ- und SEARCH-Interaktionen zur Verfügung gestellt werden.
 
-Ressourcen welche nicht konfom zu einem entsprechenden ISiK-Profil sind MÜSSEN abgelehnt werden durch das bestätigungsrelevante System. Es MUSS ein HTTP 400 Status Code zurückgegeben werden. Zudem MUSS eine OperationOutcome-Ressource mitübermittelt werden als Antwort. Diese enthält einer Auflistung aller Fehler in der übermittelten Ressoure in kodierter Form. 
+Ressourcen welche nicht konfom zu einem entsprechenden ISiK-Profil sind MÜSSEN abgelehnt werden durch das bestätigungsrelevante System. Es MUSS ein HTTP 400 Status Code zurückgegeben werden. Zudem MUSS eine OperationOutcome-Ressource mitübermittelt werden als Antwort. Diese enthält einer Auflistung aller Fehler in der übermittelten Ressoure in kodierter Form.
+
+## Update-Interaktionen
+Das Update einer Ressource KANN per HTTP PUT (vgl. [FHIR RESTful API - update](https://www.hl7.org/fhir/http.html#update)) unterstützt werden. Es ist zu beachten, dass beim Update einer Ressource bestimmte dazugehörige [Metadaten](https://www.hl7.org/fhir/resource.html#Meta) beibehalten werden SOLLTEN.
 
 
 ## Sicherheitsaspekte
