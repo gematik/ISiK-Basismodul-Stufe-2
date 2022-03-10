@@ -10,7 +10,7 @@ Die Suche MUSS sowohl mittels HTTP GET als auch HTTP POST (vgl. [FHIR RESTful Se
 ## Create-Interaktionen
 Das Erstellen einer Ressource KANN per HTTP POST (vgl. [FHIR RESTful API - create](https://www.hl7.org/fhir/http.html#create)) unterstützt werden. Einzelne Datenobjekte (spezifiziert im vorliegenden Basismodul oder in einem ISiK Erweiterungsmodul) können diese Interaktion als verpflichtend kennzeichnen.
 
-Eine Ressource welche NICHT durch das bestäigungsrelevante System angelegt wird MUSS in ```Resource.meta.tag``` eine Angabe enthalten, dass diese Ressource durch ein Fremdsystem erzeugt wurden ist. Dieser Tag MUSS durch den Server hinzugefügt werden, sollte der Client diese Angabe nicht mitübermitteln.
+Eine Ressource welche NICHT durch das bestäigungsrelevante System angelegt wird MUSS in ```Resource.meta.tag``` eine Angabe enthalten, dass diese Ressource durch ein Fremdsystem erzeugt wurden ist. Dieser Tag MUSS durch den Server hinzugefügt werden, sollte der Client diese Angabe nicht mitübermitteln. Die Kodierung MUSS mindestens mittels des CodeSystems ```http://fhir.de/CodeSystem/common-meta-tag-de``` erfolgen. Weitere Kodierungen KÖNNEN hinzugefügt werden.
 
 Eine weitere Differenzierung der Herkunft kann mittels ```Resource.meta.security``` kodiert werden. Hierzu KÖNNEN Codes aus dem ValueSet [SecurityIntegrityObservationValue](http://terminology.hl7.org/ValueSet/v3-SecurityIntegrityObservationValue) verwendet werden.
 
