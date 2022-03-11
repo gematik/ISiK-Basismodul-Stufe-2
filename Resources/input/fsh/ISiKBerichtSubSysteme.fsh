@@ -122,7 +122,9 @@ Usage: #example
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:oid:2.16.840.1.113883.6.96"
 * status = #final
-* type = $loinc#55112-7
+* type.coding[+] = $kdl#DG060104 "Blutdruckprotokoll"
+* type.coding[+] = $ihe-de-type#FUNK "Funktionsdiagnostik"
+* category = $ihe-de-class#DUR "Durchführungsprotokoll"
 * subject = Reference(patient)
 * encounter = Reference(encounter)
 * date = "2020-10-19"
