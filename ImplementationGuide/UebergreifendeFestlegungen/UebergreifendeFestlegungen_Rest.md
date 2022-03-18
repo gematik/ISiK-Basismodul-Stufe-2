@@ -10,15 +10,15 @@ Die Suche MUSS sowohl mittels HTTP GET als auch HTTP POST (vgl. [FHIR RESTful Se
 ## Create-Interaktionen
 Das Erstellen einer Ressource KANN per HTTP POST (vgl. [FHIR RESTful API - create](https://www.hl7.org/fhir/http.html#create)) unterstützt werden. Einzelne Datenobjekte (spezifiziert im vorliegenden Basismodul oder in einem ISiK Erweiterungsmodul) können diese Interaktion als verpflichtend kennzeichnen.
 
-Eine Ressource welche NICHT durch das bestäigungsrelevante System angelegt wird MUSS in ```Resource.meta.tag``` eine Angabe enthalten, dass diese Ressource durch ein Fremdsystem erzeugt wurden ist. Dieser Tag MUSS durch den Server hinzugefügt werden, sollte der Client diese Angabe nicht mitübermitteln. Die Kodierung MUSS mindestens mittels des CodeSystems ```http://fhir.de/CodeSystem/common-meta-tag-de``` erfolgen. Weitere Kodierungen KÖNNEN hinzugefügt werden.
+Eine Ressource welche NICHT durch das bestätigungsrelevante System angelegt wird, MUSS in ```Resource.meta.tag``` eine Angabe enthalten, welche indiziert, dass diese Ressource durch ein Fremdsystem erzeugt wurde. Dieser Tag MUSS durch den Server hinzugefügt werden, sollte der Client diese Angabe nicht mit übermitteln. Die Kodierung MUSS mindestens mittels des CodeSystems ```http://fhir.de/CodeSystem/common-meta-tag-de``` erfolgen. Weitere Kodierungen KÖNNEN hinzugefügt werden.
 
 Eine weitere Differenzierung der Herkunft kann mittels ```Resource.meta.security``` kodiert werden. Hierzu KÖNNEN Codes aus dem ValueSet [SecurityIntegrityObservationValue](http://terminology.hl7.org/ValueSet/v3-SecurityIntegrityObservationValue) verwendet werden.
 
-Sollte die erezugte Ressource dauerhaft übernommen werden in das bestäigungsrelevante System, MUSS der entsprechende Tag in ```Patient.meta.tag``` entfernt werden. Im diesem Falle MUSS die id der Ressource stabil bleiben und darf nicht geändert werden.
+Sollte die erzeugte Ressource dauerhaft in das bestätigungsrelevante System übernommen werden, MUSS der entsprechende Tag in ```Patient.meta.tag``` entfernt werden. Im diesem Falle MUSS die id der Ressource stabil bleiben und darf nicht verändert werden.
 
-Per Create-Interaktion erzeugte Ressourcen MÜSSEN im Falle einer erfolgreichen Übermittelung direkt über die READ- und SEARCH-Interaktionen zur Verfügung gestellt werden.
+Per Create-Interaktion erzeugte Ressourcen MÜSSEN im Falle einer erfolgreichen Übermittlung direkt über die READ- und SEARCH-Interaktionen zur Verfügung gestellt werden.
 
-Ressourcen welche nicht konfom zu einem entsprechenden ISiK-Profil sind MÜSSEN abgelehnt werden durch das bestätigungsrelevante System. Es MUSS ein HTTP 400 Status Code zurückgegeben werden. Zudem MUSS eine OperationOutcome-Ressource mitübermittelt werden als Antwort. Diese enthält einer Auflistung aller Fehler in der übermittelten Ressoure in kodierter Form.
+Ressourcen, die zu einem entsprechenden ISiK-Profil nicht konform sind, MÜSSEN durch das bestätigungsrelevante System abgelehnt werden. Als Antwort MUSS ein HTTP 400 Status Code mit einer ```OperationOutcome```-Ressource zurückgegeben werden. Diese enthält eine Auflistung aller Fehler in der übermittelten Ressource in kodierter Form.
 
 ## Update-Interaktionen
 Das Update einer Ressource KANN per HTTP PUT (vgl. [FHIR RESTful API - update](https://www.hl7.org/fhir/http.html#update)) unterstützt werden. Es ist zu beachten, dass beim Update einer Ressource bestimmte dazugehörige [Metadaten](https://www.hl7.org/fhir/resource.html#Meta) beibehalten werden SOLLTEN.
