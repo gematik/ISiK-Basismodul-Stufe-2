@@ -7,7 +7,7 @@ Instanzen, die gegen ISiKDiagnose valide sind, sind auch valide gegen
 * [das Profil ProfileConditionDiagnose der Medizininformatik-Initative - v2.0.0](https://simplifier.net/medizininformatikinitiative-moduldiagnosen/diagnose)
   * wenn unter `Condition.code.coding` mindestens eine codierte Darstellung der Diagnose angegeben wurde
 
-* [das Profil KBV_PR_Base_Diagnosis der KBV - v1.1.3](https://simplifier.net/base1x0/kbvprbasediagnosis)
+* [das Profil KBV_PR_Base_Diagnosis der KBV - v1.2.1](https://simplifier.net/base1x0/kbvprbasediagnosis)
   * wenn unter `Condition.code.coding` mindestens eine codierte Darstellung der Diagnose angegeben wurde
 
 * [das Profil KBV_PR_EAU_Condition_ICD der KBV - v1.0.2](https://simplifier.net/eau/kbvpreauconditionicd)
